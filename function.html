@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Function</title>
+
+</head>
+
+<body>
+
+    <button id="demo" onClick="myfunction()">Click Me</button>
+
+    <h1 id="color" onclick="colorchange()">Click me to change color.</h1><br>
+    <!--date-->
+    <p id="date"></p>
+    <button onclick="date()">What date is today?</button><br><br>
+    <!--message-->
+    <p id="msg"></p>
+    <button onclick="message()">click me to get hidden message.</button><br><br>
+    <!--bgcolor change-->
+
+    <button id="bgcolor" onclick="bgcolor()">backgroundColor change</button><br><br>
+
+    <button onclick="animation()" id="ani"><img src="../Bootstrap/img/house-4811590_1920.jpg" width="80vw"
+            height="80vh"></button>
+    <!--javascript function-->
+    <script>
+        function addition(x, y) {
+            var x = 10;
+            var y = 20;
+            console.log(x + y)
+        }
+        addition()
+
+        //javascript function
+
+        //function with para and with return
+        function division(a, b) {
+            var c = a / b;
+            return c;
+        }
+        var res = division(30, 5);
+        console.log(res)
+
+        //function with para but not return
+        function module(a, b) {
+            var a = 55;
+            var b = 34;
+            console.log(55 % 34)
+        }
+        module()
+
+        //function with no para but return
+        function expo() {
+            var a = 30;
+            var b = 20;
+            var c = a ** b;
+            return (c);
+        }
+        var res = expo();
+        console.log(res)
+
+        //function with no para and no return
+        function multiplication() {
+            var a = 20;
+            var b = 30;
+            console.log(a * b)
+        }
+        multiplication()
+
+        function myfunction() {
+            document.getElementById("demo").innerHTML = "Function is a block of code designed to perform particular task again and again.";
+        }
+
+        //text color change
+        function colorchange() {
+            document.getElementById("color").style.color = "green";
+        }
+
+
+        //click to open another link
+        function date() {
+            document.getElementById("date").innerHTML = Date();
+        }
+        function message() {
+            document.getElementById("msg").innerHTML = "Function parameters are listed inside the parentheses () in the function definition.<br>Function arguments are the values received by the function when it is invoked.";
+        }
+
+        function animation() {
+            document.getElementById("ani").style.transform = "rotate(20deg)";
+        }
+
+        function bgcolor() {
+            document.getElementById("bgcolor").style.backgroundColor = "yellow";
+        }
+    </script>
+
+</body>
+</html>
